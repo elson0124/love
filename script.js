@@ -3,7 +3,7 @@ function startJourney() {
 }
 
 function openEnvelope() {
-  switchScene(2, 3);
+  switchScene(2, 4);
 }
 
 /* SCENE SWITCH */
@@ -56,6 +56,28 @@ function openLetter(id) {
       }
     }, 100);
   }
+}
+let yesSize = 18;
+
+function noAnswer() {
+  const yesBtn = document.getElementById("yesBtn");
+  const noBtn = document.getElementById("noBtn");
+
+  // make YES bigger each time
+  yesSize += 8;
+  yesBtn.style.fontSize = yesSize + "px";
+  yesBtn.style.padding = (yesSize / 1.2) + "px";
+
+  // small shake effect
+  noBtn.style.animation = "shake 0.3s";
+
+  setTimeout(() => {
+    noBtn.style.animation = "";
+  }, 300);
+}
+
+function yesAnswer() {
+  alert("YAY ❤️ I knew it 😳💖");
 }
 
 /* ❌ CLOSE LETTER */

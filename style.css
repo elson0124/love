@@ -136,3 +136,41 @@ button:hover {
   0% { transform: translateY(100vh); }
   100% { transform: translateY(-100vh); }
 }
+.gameBox {
+  text-align: center;
+}
+
+.question {
+  opacity: 0.8;
+  margin-bottom: 20px;
+}
+
+.btnRow {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+/* YES button grows */
+#yesBtn {
+  font-size: 18px;
+  transition: 0.3s ease;
+  padding: 12px 25px;
+}
+
+/* NO button normal */
+#noBtn {
+  font-size: 18px;
+  padding: 12px 25px;
+  background: #444;
+}
+
+/* fun shake when NO pressed */
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
+}
