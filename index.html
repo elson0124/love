@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>For My Love ❤️</title>
+<link rel="stylesheet" href="style.css"/>
+</head>
+
+<body>
+
+<!-- floating hearts background -->
+<div class="particles"></div>
+
+<!-- SCENE 1 -->
+<section class="scene active" id="scene1">
+  <div class="fadeIn">
+    <h1>Hi baby ❤️</h1>
+    <p>Welcome to our universe...</p>
+    <button onclick="startJourney()">Enter 💌</button>
+  </div>
+</section>
+
+<!-- SCENE 2 -->
+<section class="scene hidden" id="scene2">
+  <div class="envelope" onclick="openEnvelope()">
+    <div class="flap"></div>
+    <div class="body"></div>
+    <p>Open My Heart 💖</p>
+  </div>
+</section>
+
+<!-- SCENE 3 -->
+<section class="scene hidden" id="scene3">
+
+
+  <div class="cards">
+
+    <div class="card" onclick="openLetter(1)">
+      💌 memory 1
+    </div>
+
+    <div class="card" onclick="openLetter(2)">
+      💌 memory 2
+    </div>
+
+  </div>
+</section>
+
+<!-- LETTER MODAL -->
+<div class="modal hidden" id="modal">
+  <div class="modalBox">
+
+    <div class="imageGlow">
+      <img id="letterImage" />
+    </div>
+
+    <p id="text"></p>
+
+    <button onclick="closeLetter()">Close ❤️</button>
+
+  </div>
+</div>
+
+<!-- MUSIC -->
+<audio id="music" src="song.mp3"></audio>
+
+<script src="script.js"></script>
+</body>
+</html>

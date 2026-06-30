@@ -1,0 +1,138 @@
+body {
+  margin: 0;
+  font-family: "Arial";
+  background: black;
+  overflow: hidden;
+  color: white;
+}
+
+/* SCENES */
+.scene {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: 1.2s ease;
+}
+
+.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.active {
+  opacity: 1;
+}
+
+/* BUTTON */
+button {
+  padding: 12px 25px;
+  border-radius: 30px;
+  border: none;
+  background: #ff4d6d;
+  color: white;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: scale(1.1);
+}
+
+/* ENVELOPE CINEMATIC */
+.envelope {
+  width: 220px;
+  height: 160px;
+  background: white;
+  border-radius: 12px;
+  position: relative;
+  cursor: pointer;
+
+  animation: float 3s ease-in-out infinite;
+  box-shadow: 0 0 40px rgba(255,255,255,0.2);
+}
+
+.flap {
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  background: #ff4d6d;
+  clip-path: polygon(0 0, 100% 0, 50% 100%);
+}
+
+/* FLOAT ANIMATION */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0px); }
+}
+
+/* SCENE 3 CARDS */
+.cards {
+  display: flex;
+  gap: 20px;
+}
+
+.card {
+  background: rgba(255,255,255,0.1);
+  padding: 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  backdrop-filter: blur(10px);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.1);
+}
+
+/* MODAL */
+.modal {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modalBox {
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(20px);
+  padding: 20px;
+  border-radius: 20px;
+  width: 300px;
+  text-align: center;
+  animation: pop 0.6s ease;
+}
+
+@keyframes pop {
+  from { transform: scale(0.5); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.modalBox img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 10px;
+}
+
+/* HEART PARTICLES */
+.particles::before {
+  content: "💖 💕 💖 💕 💖 💕 💖 💕";
+  position: absolute;
+  width: 100%;
+  animation: floatUp 8s linear infinite;
+  opacity: 0.3;
+  font-size: 20px;
+}
+
+@keyframes floatUp {
+  0% { transform: translateY(100vh); }
+  100% { transform: translateY(-100vh); }
+}
